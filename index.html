@@ -1,1 +1,362 @@
 
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <meta name="description" content="Portfolio of Abrar Khan - UI/UX Designer & Frontend Developer specialized in modern, user-centered web experiences.">
+    <meta name="keywords" content="Abrar Khan, UI/UX Designer, Frontend Developer, Web Design, HTML, CSS, JavaScript, Odisha, India">
+    <meta name="author" content="Abrar Khan">
+    
+    <title>Abrar Khan | UI/UX Designer & Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/png" href="https://i.ibb.co/mrXg1Nbr/1000061249-removebg-preview.png">
+</head>
+<body>
+
+    <canvas id="fluid-canvas"></canvas>
+
+    <div class="noise-overlay"></div>
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <div id="preloader" aria-hidden="false">
+        <div class="loader-content">
+            <h2 class="loader-text">Abrar Khan</h2>
+            <div class="loader-line"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#hero" class="logo" aria-label="Abrar Khan Home">
+                <span class="logo-symbol">&lt;/&gt;</span> Abrar<span class="highlight">Khan</span>
+            </a>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-close" id="nav-close" aria-label="Close Menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-moon theme-icon-dark"></i>
+                    <i class="fa-solid fa-sun theme-icon-light"></i>
+                </button>
+                
+                <button class="nav-toggle" id="nav-toggle" aria-label="Open Menu">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <section class="hero section" id="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <div class="hero__badge fade-in-up">
+                        <span class="badge-dot"></span> Available for Work
+                    </div>
+                    <h1 class="hero__title fade-in-up delay-1">
+                        Hi, I'm <span class="gradient-text">Abrar Khan</span>
+                    </h1>
+                    <h2 class="hero__subtitle fade-in-up delay-2">
+                        UI/UX Designer & <br> Frontend Developer
+                    </h2>
+                    <p class="hero__description fade-in-up delay-3">
+                  I design and build modern web experiences focused on clean aesthetics and user-centered interaction.
+                    </p>
+                    
+                    <div class="hero__buttons fade-in-up delay-4">
+                        <a href="#projects" class="btn btn--primary">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                      <a href="CV.pdf" download class="btn btn--secondary">
+    <span>Download CV</span>
+</a>
+                    </div>
+
+                    <div class="hero__stats fade-in-up delay-5">
+                        <div class="stat-item">
+                            <span class="stat-number">2026</span>
+                      <span class="stat-label">Ready to Work</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero__visual fade-in-left delay-3">
+                    <div class="hero__img-wrapper glass-card">
+                        <img src="https://i.ibb.co/cc38jdWd/character.png" alt="Image loading failed, Try Reconnecting..." class="hero__img" id="hero-img">
+                        
+                        <div class="floating-icon icon-1"><i class="fa-brands fa-figma"></i></div>
+                        <div class="floating-icon icon-2"><i class="fa-brands fa-js"></i></div>
+                        <div class="floating-icon icon-3"><i class="fa-brands fa-react"></i></div>
+                    </div>
+                    <div class="hero__blob"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">About Me</h2>
+                    <span class="section__subtitle">Who I Am</span>
+                </div>
+
+                <div class="about__container glass-card scroll-reveal">
+                    <div class="about__text">
+                        <p>
+                            I am a fresher but highly skilled <strong>UI/UX Designer and Frontend Developer</strong> focused on clean, modern and user-centered web experiences. 
+                        </p>
+                        <p>
+                            My journey started in 2024 exploring web development out of curiosity. By 2025, I began building real-world projects, practicing deeply with HTML, CSS and JavaScript. <br>Now, in 2026, I am open to professional opportunities to bring creative ideas to life.
+                        </p>
+                        
+                        <div class="about__info">
+                            <div class="info-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                <span>Kendrapara, Odisha, India</span>
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-graduation-cap"></i>
+          <span>Higher Secondary - Kendrapara Evening College</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">My Skills</h2>
+                    <span class="section__subtitle">What I Use</span>
+                </div>
+
+                <div class="skills__grid">
+                    <div class="skill-card glass-card scroll-reveal">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="skill-title">UI/UX Design</h3>
+                    <p class="skill-desc">User focused design, clean layouts and modern approaches.</p>
+                    </div>
+
+                    <div class="skill-card glass-card scroll-reveal delay-1">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="skill-title">Frontend Dev</h3>
+                        <p class="skill-desc">Converting designs into pixel-perfect HTML/CSS code.</p>
+                    </div>
+
+                    <div class="skill-card glass-card scroll-reveal delay-2">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h3 class="skill-title">JavaScript</h3>
+              <p class="skill-desc">Creating interactive and dynamic website functionality.</p>
+                    </div>
+
+                    <div class="skill-card glass-card scroll-reveal">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <h3 class="skill-title">Responsive Design</h3>
+                        <p class="skill-desc">Ensuring websites look great on mobile, tablet and desktop.</p>
+                    </div>
+
+                    <div class="skill-card glass-card scroll-reveal delay-1">
+                        <div class="skill-icon">
+                            <i class="fa-brands fa-wordpress"></i>
+                        </div>
+                        <h3 class="skill-title">WordPress</h3>
+                      <p class="skill-desc">Building and managing content-driven websites.</p>
+                    </div>
+
+                    <div class="skill-card glass-card scroll-reveal delay-2">
+                        <div class="skill-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="skill-title">User Research</h3>
+                  <p class="skill-desc">Problem solving mindset and detailed visual sense.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Portfolio</h2>
+                    <span class="section__subtitle">Recent Work</span>
+                </div>
+
+                <div class="projects__grid">
+                    <article class="project-card glass-card scroll-reveal">
+                        <div class="project__image-holder">
+                            <div class="project-placeholder-visual">gi28.site</div>
+                            <div class="project__overlay">
+                                <a href="https://gi28.site" target="_blank" class="btn-icon" aria-label="View Project">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project__content">
+                            <span class="project__category">Web Development</span>
+                            <h3 class="project__title">gi28.site</h3>
+                            <p class="project__description">
+                                My first deployed live website and personal project. Demonstrates core web development skills in a production environment.          </p>
+                            <div class="project__tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Live</span>
+                            </div>
+                            <a href="https://gi28.site" target="_blank" class="btn-text">
+                                View Live <i class="fa-solid fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Get In Touch</h2>
+                    <span class="section__subtitle">Let's Talk</span>
+                </div>
+
+                <div class="contact__container grid">
+                    <div class="contact__info glass-card scroll-reveal">
+                        <h3 class="contact__title">Contact Information</h3>
+                        <p class="contact__text">
+                            I am currently open to work and collaboration opportunities.
+                        </p>
+
+                        <div class="contact__data">
+                            <div class="contact__item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4 class="contact__label">Email</h4><a href="mailto:abrarkhan@proton.me" class="contact__link">abrarkhan@proton.me</a>        </div>
+                            </div>
+
+                            <div class="contact__item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h4 class="contact__label">Location</h4>
+                             <span class="contact__link">Kendrapara, Odisha, India</span>   </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__socials">
+                            <a href="https://www.linkedin.com/in/abrarkhan2809/" target="_blank" class="social-link" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/dev.abrarkhan/" target="_blank" class="social-link" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://t.me/Devabrarkhan/" target="_blank" class="social-link" aria-label="Telegram">
+                                <i class="fa-brands fa-telegram"></i>
+                            </a>
+                        </div>
+                    </div>
+<form 
+  action="https://api.web3forms.com/submit" 
+  method="POST"
+  class="contact__form glass-card scroll-reveal delay-1" 
+  id="contact-form">
+
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="04598148-12ed-4e9c-a789-74f88d7979c9">
+
+    <!-- Extra Pro Options -->
+    <input type="hidden" name="subject" value="New Message from Portfolio Website">
+    <input type="hidden" name="from_name" value="Abrar Khan Portfolio">
+    <input type="checkbox" name="botcheck" style="display:none;">
+
+    <div class="form__group">
+        <div class="input__wrapper">
+            <input type="text" name="name" id="name" class="contact__input" placeholder=" " required>
+            <label for="name" class="contact__label">Your Name</label>
+        </div>
+    </div>
+
+    <div class="form__group">
+        <div class="input__wrapper">
+            <input type="email" name="email" id="email" class="contact__input" placeholder=" " required>
+            <label for="email" class="contact__label">Your Email</label>
+        </div>
+    </div>
+
+    <div class="form__group">
+        <div class="input__wrapper">
+            <textarea name="message" id="message" class="contact__input" rows="5" placeholder=" " required></textarea>
+            <label for="message" class="contact__label">Message</label>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn--primary btn--full">
+        <span>Send Message</span>
+        <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+</form>
+
+<p id="form-status" class="form-status"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <a href="https://devabrarkhan.github.io/Portfolio/" class="footer__logo">Abrar Khan</a>
+                <ul class="footer__links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    &copy; 2026 Abrar Khan. All rights reserved.
+                </p>
+                <a href="#hero" class="scroll-top" aria-label="Back to top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                      </html>
+                      
