@@ -284,36 +284,32 @@ window.addEventListener('resize', () => {
 /* ========================================================
    9. CONTACT FORM HANDLING
    ======================================================== */
-const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const btn = contactForm.querySelector('button');
-        const originalContent = btn.innerHTML;
+  const btn = contactForm.querySelector("button");
+  const original = btn.innerHTML;
+  btn.innerHTML = "Sending...";
+  btn.disabled = true;
 
-        // Simulate loading
-        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-        btn.disabled = true;
+  const formData = new FormData(contactForm);
 
-        setTimeout(() => {
-            btn.innerHTML = '<i class="fa-solid fa-check"></i> Message Sent!';
-            btn.style.background = '#2ecc71'; // Green success
-            btn.style.borderColor = '#2ecc71';
-            
-            contactForm.reset();
+  const response = await fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    body: formData
+  });
 
-            // Reset button after delay
-            setTimeout(() => {
-                btn.innerHTML = originalContent;
-                btn.disabled = false;
-                btn.style.background = ''; // Revert to CSS
-                btn.style.borderColor = '';
-            }, 3000);
-        }, 1500);
-    });
-}
+  const result = await response.json();
 
+  if (result.success) {
+    btn.innerHTML = "Message Sent!";
+    contactForm.reset();
+  } else {
+    btn.innerHTML = "Error!";
+  }
 
-  
+  setTimeout(() => {
+    btn.innerHTML = original;
+    btn.disabled = false;
+  }, 3000);
+});
