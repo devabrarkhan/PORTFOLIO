@@ -281,35 +281,3 @@ window.addEventListener('resize', () => {
     }, 200);
 });
 
-/* ========================================================
-   9. CONTACT FORM HANDLING
-   ======================================================== */
-contactForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const btn = contactForm.querySelector("button");
-  const original = btn.innerHTML;
-  btn.innerHTML = "Sending...";
-  btn.disabled = true;
-
-  const formData = new FormData(contactForm);
-
-  const response = await fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    body: formData
-  });
-
-  const result = await response.json();
-
-  if (result.success) {
-    btn.innerHTML = "Message Sent!";
-    contactForm.reset();
-  } else {
-    btn.innerHTML = "Error!";
-  }
-
-  setTimeout(() => {
-    btn.innerHTML = original;
-    btn.disabled = false;
-  }, 3000);
-});
